@@ -1,0 +1,293 @@
+.popup_wrapper {
+   display: none;
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   z-index: 11;
+   left: 0;
+   top: 0;
+   font-size: 0;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+.popup_wrapper.alert_box {
+   z-index: 12;
+}
+.popup_wrapper.display_block {
+   display: block;
+}
+.popup_wrapper.url_message .mask {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+.popup_wrapper.url_message .popup.url_message {
+   display: inline-block;
+   position: relative;
+}
+.popup_container {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+}
+.mask {
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   background-color: #fff;
+   opacity: 0.8;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+.mask.common {
+   display: none;
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   left: 0;
+   top: 0;
+   z-index: 6;
+}
+.popup {
+   display: inline-block;
+   font-size: 0;
+   line-height: 18px;
+   color: #424242;
+   font-weight: 500;
+   border-radius: 4px;
+   background-color: #fff;
+   box-shadow: 0 1px 8px 4px rgba(0, 0, 0, 0.1);
+   border: solid 1px #ddd;
+   text-align: left;
+   padding: 40px;
+   max-width: 95%;
+   max-height: 95%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   line-height: 1;
+}
+.popup .title, .popup h6 {
+   display: inline-block;
+   width: 100%;
+   text-align: left;
+   color: #000;
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: 40px;
+}
+.popup p {
+   font-size: 16px;
+}
+.popup .popup_msg {
+   font-size: 16px;
+   font-weight: 500;
+   color: #424242;
+   line-height: 1;
+}
+.popup .input_wrapper.hour_minute_wrapper {
+   display: block;
+   width: 100%;
+   max-width: 220px;
+   font-size: 0;
+}
+.popup .input_wrapper.hour_minute_wrapper.input_error:after {
+   display: inline-block;
+   content: attr(error-message);
+   color: #ff9292;
+   margin-top: 10px;
+   font-size: 13px;
+   font-style: italic;
+}
+.popup .input_wrapper.hour_minute_wrapper.input_error .input_container input, .popup .input_wrapper.hour_minute_wrapper.input_error .input_container select {
+   border-color: #ff9292;
+}
+.popup .input_wrapper.hour_minute_wrapper.input_error .input_container input:focus, .popup .input_wrapper.hour_minute_wrapper.input_error .input_container select:focus {
+   border-color: #ff9292;
+   box-shadow: none;
+}
+.popup .input_wrapper.hour_minute_wrapper .input_label {
+   margin-bottom: 20px !important;
+}
+.popup .input_wrapper.hour_minute_wrapper .input_container {
+   display: inline-block;
+   width: calc((100% - 15px)/2);
+   max-width: none;
+   margin: 0;
+}
+.popup .input_wrapper.hour_minute_wrapper .input_container.input_error:after {
+   display: none;
+}
+.popup .input_wrapper.hour_minute_wrapper .input_container:last-child {
+   margin-left: 12px;
+}
+.popup .input_error:after {
+   position: relative;
+   bottom: auto;
+   left: auto;
+   margin-top: 5px;
+}
+.popup.search_card {
+   width: 400px;
+   height: 670px;
+   max-height: 100vh;
+   max-width: 100vw;
+   overflow: hidden;
+}
+.popup.search_card .icon_cross {
+   top: 25px;
+   right: 40px;
+}
+.popup.clone_child {
+   width: 400px;
+   padding: 45px 0 20px;
+   height: 500px;
+   max-height: 100vh;
+   max-width: 100vw;
+   overflow-y: hidden;
+}
+.popup.clone_child .clone_setting_wrapper {
+   display: inline-block;
+   width: 100%;
+   height: 358px;
+   overflow-y: scroll;
+   padding: 0 20px;
+}
+.popup.clone_child .save_button_container {
+   display: inline-block;
+   width: 100%;
+   background-color: #fff;
+   padding: 20px 20px 0;
+}
+.popup.alert_card {
+   width: 400px;
+   height: 100px;
+   padding: 35px 20px 20px;
+}
+.popup.delete_card {
+   width: 535px;
+}
+.popup.delete_card p, .popup.delete_card .delete_content {
+   margin-bottom: 20px;
+}
+.popup.delete_card .delete_content.one {
+   display: inline-block;
+   width: 100%;
+   font-size: 16px;
+   line-height: 18px;
+}
+.popup.device_location {
+   width: 600px;
+   height: 400px;
+}
+.popup.device_message {
+   width: 335px;
+}
+.popup.device_message .loader_wrapper {
+   padding: 0;
+}
+.popup.device_message .popup_msg {
+   line-height: 1.2;
+   width: 90%;
+}
+.popup.device_delete_card {
+   width: 450px;
+}
+.popup.device_delete_card .delete_content {
+   margin-bottom: 20px;
+}
+.popup.device_delete_card .delete_device_name {
+   font-weight: 600;
+   color: #212121;
+}
+.popup.device_edit_card {
+   width: 424px;
+}
+.popup.device_edit_card .input_wrapper {
+   margin-top: 0;
+   margin-bottom: 40px;
+}
+.popup.device_edit_card .input_container {
+   width: 100%;
+   margin: 0;
+}
+.popup.url_message {
+   width: 535px;
+   height: auto;
+   max-height: 500px;
+   padding: 35px 40px 40px;
+   max-width: 95vw;
+}
+.popup.url_message p {
+   margin: 0 0 20px;
+}
+.popup ul {
+   padding: 0 0 0 10px;
+   margin: 0 0 20px;
+   max-height: 100px;
+   min-height: 22px;
+   overflow-y: scroll;
+   font-size: 16px;
+}
+.popup ul li {
+   margin: 5px 0 0;
+}
+.icon_cross {
+   display: inline-block;
+   position: absolute;
+   top: 35px;
+   right: 40px;
+   cursor: pointer;
+   z-index: 1;
+   font-size: 0;
+   line-height: 1;
+}
+.icon_cross:before {
+   display: inline-block;
+   content: asset-url('icn_cross.svg');
+}
+.delete_content.one {
+   display: block;
+}
+.delete_content.one span {
+   font-weight: 600;
+   color: #212121;
+   text-transform: capitalize;
+   word-break: break-all;
+}
+.delete_content.two {
+   display: block;
+   font-size: 15px;
+   line-height: 18px;
+   color: #616161;
+   font-weight: 500;
+}
+@media screen and (max-width: 970px) {
+   .popup.device_edit_card h6 {
+      margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+   .popup {
+      padding: 20px;
+  }
+   .popup .link_button, .popup .submit_button {
+      width: 120px;
+  }
+   .popup.search_card {
+      padding: 0;
+  }
+   .popup.alert_card {
+      padding: 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+   .popup.device_edit_card .link_button, .popup.device_edit_card .submit_button {
+      width: 110px;
+  }
+}

@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background-color:#161E24;
+}
+
+.header {
+  align-items: right;
+  display: block;
+  height: 60px;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+}
+
+.header__link-container {
+  align-items: right;
+  display: flex;
+  padding: 0 10px;
+}
+
+.header__link-container--right {
+  justify-self: none;
+  padding: 0 30px;
+}
+
+
+.link {
+  margin: 10px 2px;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:visited,
+.link {
+  color: black;
+}
+
+.info {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: #3c4043;
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  overflow: scroll;
+  padding: 40px 30px;
+  position: fixed;
+  right: 30px;
+  top: 60px;
+  z-index: 100;
+}
+
+.info__instructions {
+  color: inherit;
+  display: none;
+  font-family: inherit;
+  font-size: inherit;
+  height: 458px;
+  width: 330px;
+}
+
+.info__instructions > * {
+  padding-bottom: 20px;
+}
+
+.info__instructions__button {
+  background-color: white;
+  color: black;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 4px;
+  width: auto;
+}
+
+.info__instructions__button:disabled {
+  opacity: 0.5;
+}
+
+.info__instructions__or {
+  align-self: center;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  justify-self: center;
+  text-align: center;
+}
+
+.info__instructions__code {
+  color: red;
+  font-family: monospace;
+  font-size: inherit;
+}
+
+.info__instructions__list {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.info__instructions__list__item {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
+
+.info__about {
+  color: inherit;
+  display: none;
+  font-family: inherit;
+  font-size: inherit;
+  height: 512px;
+  width: 356px;
+}
+
+.info__about > p:not(:last-child) {
+  margin: 10px 0px;
+}
+
+.info__about > p,
+.info__about > p > i,
+.info__about > p > b {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.info__about > p > b {
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bolder;
+}
+
+.info__heading {
+  color: #202124;
+  font-family: inherit;
+  font-size: 16px;
+  text-align: center;
+}
+
+.info--show {
+  display: block;
+}
+
+@media (max-width: 400px) {
+  #about.info {
+    right: calc((100% - 356px) / 2);
+  }
+
+  #instructions.info {
+    right: calc((100% - 330px) / 2);
+  }
+
+  .header__picture {
+    display: none;
+  }
+}
+
+.heading-title {
+  font-family: 'Lato', sans-serif;
+  margin: 100px 0 25px 0;
+}
+
+.heading-title > * {
+  font-size: 70px;
+}
+
+.heading-title > .red {
+  color: #db4437;
+}
+.heading-title > .blue {
+  color: #4285f4;
+}
+.heading-title > .green {
+  color: #0f9d58;
+}
+.heading-title > .yellow {
+  color: #f4b400;
+}
+.heading-title > .white {
+  color: #ffffff;
+}
+
+.search {
+  border-radius: 25px;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  padding: 10px 0px;
+  position: relative;
+  width: 582px;
+  background-color:#161E24;
+  color:white;
+}
+
+.search:hover,
+.search:active {
+  box-shadow: 0px 1px 9px -4px grey;
+}
+
+.search__form {
+  display: flex;
+  background-color:#161E24;
+}
+
+.search__icon {
+  fill: gray;
+  height: 30px;
+  padding: 0 16px;
+}
+
+.search__input {
+  background-color:#161E24;
+  border: none;
+  font-size: 18px;
+  height: 30px;
+  outline: none;
+  width: 100%;
+  color:white;
+}
+
+.search__underline {
+  border-top: 1px solid #e8eaed;
+  padding-bottom: 4px;
+  margin: 10px 20px 10px 14px;
+}
+
+.search__results__list {
+  margin: 0px;
+  padding: 0px;
+}
+
+.search__results__list > li {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+}
+
+.search__results__list > li:hover {
+  background-color: #eee;
+}
+
+.search__results__list > li,
+.search__results__list > li > b {
+  font-size: 18px;
+}
+
+.search__btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search__button {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  border: 1px solid #f2f2f2;
+  color: #5f6368;
+  font-size: 16px;
+  margin: 11px 4px;
+  padding: 8px 16px;
+  width: 145px;
+}
+
+.search__button:hover {
+  border-color: #c6c6c6;
+}
+
+.search__button:focus {
+  border: 1px solid blue;
+  outline: none;
+}
+
+.search__button:disabled {
+  opacity: 0.5;
+  border: none;
+}
+
+.search__metrics {
+  bottom: 2px;
+  color: #70757a;
+  font-size: 10px;
+  font-style: italic;
+  position: absolute;
+  right: 20px;
+}
+
+.search__metrics:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .main {
+    width: 90%;
+  }
+
+  .search {
+    width: auto;
+  }
+
+  .heading-title {
+    margin: 20px 0;
+  }
+
+  .heading-title > * {
+    font-size: 40px;
+  }
+
+  .search__button {
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .search__metrics {
+    font-size: 8px;
+  }
+}
+
+.footer {
+  align-items: center;
+  background-color: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  bottom: 0;
+  color: #5f6368;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 15px;
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .footer__link__container,
+  .footer__number__container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .footer__number__container > p {
+    text-align: center;
+  }
+
+  .header__link-container--right {
+    padding: 0;
+  }
+}
+
+@media (max-height: 400px) {
+  .footer {
+    visibility: hidden;
+  }
+}
+
+.footer__link__container {
+  justify-content: flex-end;
+}
+
+.footer__link__container,
+.footer__number__container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.footer__number__container > p {
+  margin: 0 10px;
+  width: 180px;
+}
+
+.footer__link {
+  display: flex;
+  margin: 0 15px;
+}
+
+.footer__link,
+.footer__link:visited {
+  color: #5f6368;
+}
+
+.footer__number {
+  width: 40px;
+}
